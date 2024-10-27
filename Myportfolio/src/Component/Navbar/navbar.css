@@ -1,0 +1,42 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between; /* Left and right alignment */
+  align-items: center;
+}
+
+
+.ravindu {
+  color: rgb(20.39% 100% 100%);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+
+.other {
+  list-style: none;
+  display: flex;
+  gap: 25px; 
+  margin: 0;
+  padding: 0;
+}
+
+.other li a {
+  text-decoration: none;
+  color: rgb(20.39% 100% 100%);
+  font-size: 25px;
+  transition: color 0.3s;
+}
+
+.other li a:hover {
+  color: #ddd; 
+}
+
+@media  (max-width: 576px ){
+  .navbar-container {
+    display: flex;
+    justify-content: space-between; /* Left and right alignment */
+    align-items: center;
+  }
+  
+  
+}
