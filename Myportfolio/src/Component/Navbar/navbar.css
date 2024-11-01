@@ -3,7 +3,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #100f0f;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   /* background-color: black; Navbar background */
 }
 
@@ -19,7 +28,7 @@
 .other {
   list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 30px;
   margin: 0;
   padding: 0;
   font-size: small;
