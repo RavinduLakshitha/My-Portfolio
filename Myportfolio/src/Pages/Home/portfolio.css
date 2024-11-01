@@ -1,0 +1,93 @@
+/* Ensure full page width for the container */
+.container {
+  display: flex; /* Use Flexbox */
+  justify-content: space-between; /* Space between the two parts */
+  align-items: stretch; /* Ensure both sections align vertically */
+  height: auto; /* Full viewport height */
+}
+
+/* Style for both boxes */
+.box {
+  flex: 1; /* Take equal space for both boxes */
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* background-color: white; */
+  border-radius: 8px;
+  size: 50%;
+}
+
+.flexbox1 {
+  width: 50%;
+  padding-top: 50px;
+}
+
+.flexbox2 {
+  width: 50%;
+  padding-top: 50px;
+}
+
+.profile {
+  color: aliceblue;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 44px;
+  padding-left: 0%;
+  text-align: justify;
+  margin-top: 60px;
+}
+
+.role {
+  color: rgb(52, 235, 235);
+  font-size: 30px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.myp {
+  padding-top: 5px;
+}
+
+.content {
+  color: aliceblue;
+  text-align: justify;
+  padding-top: 40px;
+  font-size: 20px;
+  padding-right: 38px;
+}
+
+.hirebtn {
+  display: inline-flex;
+  align-items: center; /* Vertically center align */
+  justify-content: center; /* Center content */
+  /* gap: 8px; */
+
+  border: none; /* Remove default border */
+  border-radius: 10px; /* Smooth rounded edges */
+  background-color: rgb(52, 235, 235, 0.8); /* Vibrant background color */
+  color: black; /* White text for contrast */
+  padding: 12px 24px; /* Add padding for a nicer size */
+  font-size: 18px; /* Increase font size for readability */
+  font-weight: bold; /* Bold text */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: all 0.3s ease; /* Smooth transitions for effects */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
+  margin-top: 70px;
+}
+
+/* Hover effect */
+.hirebtn:hover {
+  background-color: rgb(35, 200, 200); /* Slightly darker color on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Elevate shadow on hover */
+  transform: scale(1.05); /* Slight zoom-in effect */
+}
+
+/* Active effect (on click) */
+.hirebtn:active {
+  transform: scale(0.98); /* Slightly shrink on click */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Reduce shadow */
+}
+
+/* Focus effect for accessibility */
+.hirebtn:focus {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
