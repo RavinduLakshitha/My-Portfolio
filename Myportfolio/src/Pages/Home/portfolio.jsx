@@ -5,7 +5,7 @@ import { FaHireAHelper } from "react-icons/fa";
 const Portfolio = () => {
   return (
     <>
-      <div className="container">
+      <div id="portfolio" className="container">
         <div className="flexbox1">
           <div className="myp">
             <h1 className="profile">
