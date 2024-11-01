@@ -1,8 +1,138 @@
-.topic{
-    color: aliceblue;
-    font-size: 60px;
-    font-weight: bold;
-    border-top: 200px;
-    margin-top: 20px;     
-    padding-top: 100px;
+/* Styling for the Topic Header */
+.topic {
+  color: aliceblue;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adds a subtle shadow */
+  margin-top: 20px;
+  padding-top: 100px;
+  height: auto;
+}
+
+/* Card Container */
+.card {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+/* InternX  */
+.InternX {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 610px;
+  width: 400px;
+  margin: 10px;
+  padding: 1rem;
+  border: 2px solid rgb(52, 235, 235); /* Border color for InternX card */
+  background-color: #100f0f;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.2s, border-color 0.2s; /* Smooth transition on hover */
+}
+
+.InternX:hover {
+  /* transform: scale(1.02); */
+  box-shadow: 0px 6px 10px rgba(52, 235, 235, 0.6); /* Highlighted shadow */
+  border-color: aliceblue; /* Changes border color on hover */
+}
+
+/* Task Card */
+.Task {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 50%;
+  max-width: 30%;
+  margin: 10px;
+  padding: 1rem;
+  background-color: rgb(18, 18, 19);
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+/* Card Title */
+.card-title {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: rgb(52, 235, 235);
+  font-style: inherit;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Card Text */
+.card-text {
+  font-weight: lighter;
+  font-size: 0.9rem;
+  text-align: justify;
+  color: #ccc;
+  line-height: 1.5; /* Improved readability */
+  padding: 0 10px; /* Adds padding inside the card */
+}
+
+/* Technologies Container */
+.Technologies {
+  padding: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  /* margin-top: 20px; */
+  padding-bottom: 15px;
+}
+
+/* Technology Icons */
+.Technologies img {
+  width: 35px;
+  height: 35px;
+  transition: transform 0.2s;/* Smooth transition on hover */
+  border: 2px solid rgb(52, 235, 235); 
+  border-radius: 8px;
+  padding: 3px;
+  background-color: #1c1c1c; 
+}
+
+.Technologies img:hover {
+  /* transform: scale(1.02); */
+  box-shadow: 0px 6px 10px rgba(52, 235, 235, 0.6); 
+  border-color: aliceblue; 
+}
+
+/* Image Styling */
+.Images {
+  height: 250px;
+  padding: 10px;
+  width: 480px;
+  border-radius: 8px; /* Rounded corners for image */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adds a shadow to the image */
+}
+
+/* Task managment app */
+
+.Taskmng {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 610px;
+  width: 400px;
+  margin: 10px;
+  padding: 1rem;
+  border: 2px solid rgb(52, 235, 235); /* Border color for InternX card */
+  background-color: #100f0f;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.2s, border-color 0.2s;
+}
+
+.Taskmng:hover {
+  
+  box-shadow: 0px 6px 10px rgba(52, 235, 235, 0.6); /* Highlighted shadow */
+  border-color: aliceblue; /* Changes border color on hover */ /* Changes border color on hover */
 }
