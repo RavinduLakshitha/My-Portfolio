@@ -1,42 +1,71 @@
+/* Navbar Container */
 .navbar-container {
   display: flex;
-  justify-content: space-between; /* Left and right alignment */
+  justify-content: space-between;
   align-items: center;
+  padding: 10px 20px;
+  /* background-color: black; Navbar background */
 }
 
-
+/* Brand Name */
 .ravindu {
-  color: rgb(20.39% 100% 100%);
+  color: rgb(52, 235, 235);
   font-size: 30px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
 }
 
-
+/* Menu Items */
 .other {
   list-style: none;
   display: flex;
-  gap: 25px; 
+  gap: 25px;
   margin: 0;
   padding: 0;
+  font-size: small;
 }
 
 .other li a {
   text-decoration: none;
-  color: rgb(20.39% 100% 100%);
-  font-size: 25px;
+  color: rgb(52, 235, 235);
+  font-size: 18px;
   transition: color 0.3s;
 }
 
 .other li a:hover {
-  color: #ddd; 
+  color: #ddd;
 }
 
-@media  (max-width: 576px ){
-  .navbar-container {
-    display: flex;
-    justify-content: space-between; /* Left and right alignment */
-    align-items: center;
+/* Menu Icon */
+.menu-icon {
+  display: none;
+  font-size: 25px;
+  color: rgb(52, 235, 235);
+  cursor: pointer;
+}
+
+/* Responsive Menu Styles */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
   }
-  
-  
+
+  .other {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100px; /* Adjusted based on navbar height */
+    left: 0;
+    right: 0;
+    background-color: #100f0f;
+    padding: 20px 0;
+    z-index: 1;
+    font-size: 20px;
+     /* Ensure it stays above other elements */
+  }
+
+  .other.open {
+    display: flex; /* Show the menu when open */
+  }
 }
