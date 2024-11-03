@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    border: none;
+}
+.timeline {
+  color: aliceblue;
+  font-size: 60px; /* Responsive font size */
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  padding-top: 100px;
+  /* padding-bottom: 20px; */
+}
+.flexbox02 {
+    width: 5px;
+    height: 500px;
+    flex-direction: column;
+    background-color: rgb(52, 235, 235);
+}
+.flexbox01 {
+  text-align: justify;
+  width: auto;
+  height: auto;
+}
+
+.flexbox01 h1 {
+  font-size: 15px;
+}
+.flexbox01 h2 {
+  font-size: 20px;
+  color: rgb(52, 235, 235);
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.flexbox01 h3 {
+  font-size: 14px;
+  /* color: rgb(52, 235, 235); */
+}
+
+.Secondry {
+    padding-top: 40px;
+}
+
+.higher{
+    padding-top: 20px;
+}
