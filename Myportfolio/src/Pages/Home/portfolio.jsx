@@ -3,6 +3,10 @@ import ravinduimg from "../../Images/ravinduimg.png";
 import { FaHireAHelper } from "react-icons/fa";
 
 const Portfolio = () => {
+  const scrollToContact = () => {
+    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+  }; 
+
   return (
     <>
       <div id="portfolio" className="portfolio">
@@ -23,7 +27,7 @@ const Portfolio = () => {
                 so feel free to reach out!
               </p>
             </div>
-            <button className="hirebtn">
+            <button className="hirebtn" onClick={scrollToContact}>
               <FaHireAHelper size={25} />
               ire Me
             </button>
