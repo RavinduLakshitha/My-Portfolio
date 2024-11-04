@@ -1,6 +1,7 @@
 // import { useState } from 'react'
 import "./App.css";
 import NavbarCom from "./Component/Navbar/navbar";
+import Contactme from "./Pages/Contact/contact";
 import Portfolio from "./Pages/Home/portfolio";
 import Project from "./Pages/Projects/projects";
 import TechStack from "./Pages/TechStack/techstack";
@@ -14,6 +15,7 @@ function App() {
       <Project />
       <TechStack />
       <Timeline />
+      <Contactme />
     </div>
   );
 }
