@@ -1,4 +1,5 @@
 import "./timeline.css";
+import Susl from "../../Images/susl.png";
 
 const Timeline = () => {
   return (
@@ -9,6 +10,7 @@ const Timeline = () => {
           <div className="flexbox02"></div>
           <div className="flexbox01">
             <div className="higher">
+              <img className="photo" src={Susl} alt="susl logo" />
               <h2>
                 <b>BSc. Honours Degree in Software Engineering</b>
               </h2>

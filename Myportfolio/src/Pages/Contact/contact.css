@@ -16,18 +16,21 @@
   gap: 20px;
 }
 .flexbox001 {
-  width: 60%;
+  width: 50%;
   height: auto;
+  padding-top: 5%;
 }
-.clx1 {
+.clx {
     width: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .flexbox002 {
-  width: 40%;
+  width: 50%;
   height: auto;
   font-size: 50px;
-  padding-top: 10%;
+  padding-top: 5%;
   text-align: start;
   color: rgb(52, 235, 235);
 }
@@ -44,11 +47,13 @@
 .contform label {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items:flex-start;
   gap: 20px;
-  padding: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
   font-size: 20px;
-  margin-left: 20px;
+  
 }
 
 .subbtn {
@@ -62,12 +67,13 @@
   border-radius: 10px; /* Smooth rounded edges */
   background-color: rgb(52, 235, 235, 0.8); /* Vibrant background color */
   color: black; /* White text for contrast */
-  padding: 10px 20px; /* Add padding for a nicer size */
+  padding: 8px 16px; /* Add padding for a nicer size */
   font-size: 18px; /* Increase font size for readability */
   cursor: pointer; /* Change cursor to pointer on hover */
   transition: all 0.3s ease; /* Smooth transitions for effects */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
   margin-top: 50px;
+  margin-left: -90px;
 }
 
 .subbtn:hover {

@@ -4,7 +4,7 @@
     justify-content: center;
     align-items: flex-start;
     gap: 20px;
-    border: none;
+    /* border: none; */
 }
 .timeline {
   color: aliceblue;
@@ -21,6 +21,13 @@
     height: 500px;
     flex-direction: column;
     background-color: rgb(52, 235, 235);
+}
+.photo{
+  width: 100px;
+  height: 100px;
+    /* background-color: rgb(52, 235, 235);
+    background-color: rgb(52, 235, 235); */
+    color: rgb(52, 235, 235);
 }
 .flexbox01 {
   text-align: justify;

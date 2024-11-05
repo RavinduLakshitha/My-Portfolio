@@ -64,7 +64,7 @@ const Contactme = () => {
           </div>
           <div className="flexbox001">
             <form className="contform" onSubmit={handleSubmit}>
-              <div className="clx1">
+              <div className="clx">
                 <label>Enter your name:</label>
                 <input
                   className="inbox"
