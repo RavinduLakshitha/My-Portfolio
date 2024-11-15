@@ -1,10 +1,10 @@
 .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
-    /* border: none; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  /* border: none; */
 }
 .timeline {
   color: aliceblue;
@@ -17,17 +17,15 @@
   /* padding-bottom: 20px; */
 }
 .flexbox02 {
-    width: 5px;
-    height: 500px;
-    flex-direction: column;
-    background-color: rgb(52, 235, 235);
+  width: 5px;
+  height: 800px;
+  flex-direction: column;
+  background-color: rgb(52, 235, 235);
 }
-.photo{
+.photo {
   width: 100px;
   height: 100px;
-    /* background-color: rgb(52, 235, 235);
-    background-color: rgb(52, 235, 235); */
-    color: rgb(52, 235, 235);
+  border-radius: 50%;
 }
 .flexbox01 {
   text-align: justify;
@@ -50,9 +48,26 @@
 }
 
 .Secondry {
-    padding-top: 40px;
+  padding-top: 40px;
 }
 
-.higher{
-    padding-top: 20px;
+.higher {
+  padding-top: 20px;
+}
+
+.Secondry .photo {
+  width: 100px;
+  height: 100px;
+}
+
+.flexbox01 .Secondry:nth-child(3) .photo {
+  background-color: #e1effb; /* Replace with your desired color */
+  border-radius: 50%; /* Optional rounded corners */
+}
+
+.photo:hover {
+  /* background-color: rgb(35, 200, 200); */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0px 6px 10px rgba(249, 250, 250, 0.6);
 }

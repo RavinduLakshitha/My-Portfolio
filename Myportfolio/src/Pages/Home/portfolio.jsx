@@ -2,6 +2,7 @@ import "./portfolio.css";
 import ravinduimg from "../../Images/ravinduimg.png";
 import { FaHireAHelper } from "react-icons/fa";
 
+
 const Portfolio = () => {
   const scrollToContact = () => {
     document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
@@ -9,6 +10,21 @@ const Portfolio = () => {
 
   return (
     <>
+    <div className="wrapper">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
       <div id="portfolio" className="portfolio">
         <h1>about</h1>
         <div className="container">
