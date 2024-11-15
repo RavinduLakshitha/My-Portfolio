@@ -1,5 +1,7 @@
 import "./timeline.css";
 import Susl from "../../Images/susl.png";
+import scc from "../../Images/SCC.png";
+import smv from "../../Images/SMV.png";
 
 const Timeline = () => {
   return (
@@ -22,6 +24,7 @@ const Timeline = () => {
               <h1>2021 - 2025</h1>
             </div>
             <div className="Secondry">
+            <img className="photo" src={scc} alt="SCC logo" />
               <h2>
                 <b>GCE Advanced Level</b>
               </h2>
@@ -31,6 +34,7 @@ const Timeline = () => {
               <h1>2019</h1>
             </div>
             <div className="Secondry">
+            <img className="photo" src={smv} alt="SMV logo" />
               <h2>
                 <b>GCE Ordinary Level</b>
               </h2>
