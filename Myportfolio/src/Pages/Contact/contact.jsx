@@ -1,19 +1,37 @@
 import "./contact.css";
-import { useState } from "react";
+import Swal from 'sweetalert2'
+// import { useState } from "react";
 import { IoCall } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 
 const Contactme = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [msg, setMsg] = useState("");
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert(`Submitted name: ${name}`);
-    // You can also perform other actions, like sending data to an API.
+    formData.append("access_key", "8df88466-0e89-4129-927b-3105ccc49fbc");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      Swal.fire({
+        title: "Success!",
+        text: "Message sent successfully !",
+        icon: "success"
+      });
+    }
   };
 
   return (
@@ -63,14 +81,14 @@ const Contactme = () => {
             </div>
           </div>
           <div className="flexbox001">
-            <form className="contform" onSubmit={handleSubmit}>
+            <form className="contform" onSubmit={onSubmit}>
               <div className="clx">
                 <label>Enter your name:</label>
                 <input
                   className="inbox"
                   type="text"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  name="name"
+                  required
                 />
               </div>
               <div className="clx">
@@ -78,8 +96,8 @@ const Contactme = () => {
                 <input
                   className="inbox"
                   type="text"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  name="email"
+                  required
                 />
               </div>
 
@@ -88,8 +106,8 @@ const Contactme = () => {
                 <input
                   className="inbox"
                   type="text"
-                  value={msg}
-                  onChange={(e) => setMsg(e.target.value)}
+                  name="massage"
+                  required
                 />
               </div>
               <button className="subbtn" type="submit">
