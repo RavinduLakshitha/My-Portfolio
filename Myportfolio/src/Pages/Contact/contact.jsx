@@ -1,12 +1,40 @@
+import { useEffect, useRef } from "react";
 import "./contact.css";
-import Swal from 'sweetalert2'
-// import { useState } from "react";
+import Swal from "sweetalert2";
 import { IoCall } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import { FaLinkedin } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 
 const Contactme = () => {
+  const contactRef = useRef(null);
+
+  useEffect(() => {
+    const contactElement = contactRef.current; // Store ref value in a variable
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          contactElement.classList.add("animate");
+        } else {
+          contactElement.classList.remove("animate");
+        }
+      },
+      { threshold: 0.5 } // Trigger when 50% of the section is visible
+    );
+
+    if (contactElement) {
+      observer.observe(contactElement);
+    }
+
+    // Cleanup the observer when the component unmounts or updates
+    return () => {
+      if (contactElement) {
+        observer.unobserve(contactElement);
+      }
+    };
+  }, []); // Empty dependency array to run only once when component mounts
+
   const onSubmit = async (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -20,23 +48,27 @@ const Contactme = () => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Accept: "application/json"
+        Accept: "application/json",
       },
-      body: json
+      body: json,
     }).then((res) => res.json());
 
     if (res.success) {
       Swal.fire({
         title: "Success!",
-        text: "Message sent successfully !",
-        icon: "success"
+        text: "Message sent successfully!",
+        icon: "success",
       });
     }
   };
 
   return (
     <>
-      <div className="contact" id="contact">
+      <div
+        className="contact"
+        id="contact"
+        ref={contactRef} // Attach the ref to the div
+      >
         Contact Me
         <div
           className="container"
@@ -84,31 +116,16 @@ const Contactme = () => {
             <form className="contform" onSubmit={onSubmit}>
               <div className="clx">
                 <label>Enter your name:</label>
-                <input
-                  className="inbox"
-                  type="text"
-                  name="name"
-                  required
-                />
+                <input className="inbox" type="text" name="name" required />
               </div>
               <div className="clx">
                 <label>Enter your email:</label>
-                <input
-                  className="inbox"
-                  type="text"
-                  name="email"
-                  required
-                />
+                <input className="inbox" type="text" name="email" required />
               </div>
 
               <div className="clx">
                 <label>Enter your Massage:</label>
-                <input
-                  className="inbox"
-                  type="text"
-                  name="massage"
-                  required
-                />
+                <input className="inbox" type="text" name="massage" required />
               </div>
               <button className="subbtn" type="submit">
                 Submit

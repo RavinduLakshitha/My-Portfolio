@@ -6,6 +6,7 @@
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   margin-top: 20px;
   padding-top: 100px;
+  animation: fadeIn 1.2s ease-in-out; /* Fade-in animation */
 }
 
 .container {
@@ -14,16 +15,24 @@
   justify-content: center;
   align-items: flex-start;
   gap: 20px;
+  animation: slideUp 1s ease-out; /* Slide-up animation for container */
 }
+
+.flexbox001,
+.flexbox002 {
+  animation: slideInLeft 1s ease-out; /* Slide in from left animation */
+}
+
 .flexbox001 {
   width: 50%;
   height: auto;
   padding-top: 5%;
 }
+
 .clx {
-    width: auto;
-    display: flex;
-    flex-direction: column;
+  width: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .flexbox002 {
@@ -42,18 +51,19 @@
   color: aliceblue;
   text-align: justify;
   font-weight: normal;
+  animation: fadeIn 1.5s ease-in-out; /* Text fading in */
 }
 
 .contform label {
   display: flex;
   flex-direction: row;
-  align-items:flex-start;
+  align-items: flex-start;
   gap: 20px;
   padding-top: 20px;
   padding-right: 20px;
   padding-bottom: 20px;
   font-size: 20px;
-  
+  animation: zoomIn 0.8s ease; /* Zoom-in effect */
 }
 
 .subbtn {
@@ -74,14 +84,15 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
   margin-top: 50px;
   margin-left: -90px;
+  animation: pulse 1.5s infinite; /* Pulsing animation */
 }
 
 .subbtn:hover {
   background-color: rgb(35, 200, 200);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  transform: scale(1.05);
-  box-shadow: 0px 6px 10px rgba(249, 250, 250, 0.6);
+  transform: scale(1.05); /* Slightly enlarge */
+  box-shadow: 0px 6px 10px rgba(249, 250, 250, 0.6); /* Enhanced shadow */
 }
+
 .subbtn:active {
   transform: scale(0.98); /* Slightly shrink on click */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Reduce shadow */
@@ -99,46 +110,17 @@
   transition: transform 0.3s ease;
   align-items: flex-end;
   font-weight: normal;
+  animation: zoomIn 0.8s ease; /* Zoom-in animation */
 }
 
 .inbox:hover {
-  transform: scale(1.02);
-  border-color: rgb(37, 171, 171);
+  transform: scale(1.02); /* Slight enlargement */
+  border-color: rgb(37, 171, 171); /* Highlight border */
 }
-.call {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: 15px;
-  gap: 20px;
-  padding-left: 10px;
-  padding-top: 20px;
-  padding-bottom: 5px;
-}
-.email {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: 15px;
-  gap: 20px;
-  padding-left: 10px;
-  padding-top: 5px;
-  padding-bottom: 10px;
-}
-.icon {
-  height: 20px;
-  width: 20px;
-}
-.linkedin a {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: 15px;
-  gap: 20px;
-  padding-left: 10px;
-  padding-top: 5px;
-  padding-bottom: 10px;
-}
+
+.call,
+.email,
+.linkedin a,
 .facebook a {
   display: flex;
   flex-direction: row;
@@ -148,4 +130,86 @@
   padding-left: 10px;
   padding-top: 5px;
   padding-bottom: 10px;
+  animation: slideInRight 1s ease-out; /* Slide in from right animation */
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translateX(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(52, 235, 235, 0.5);
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(30px); /* Move slightly down initially */
+  transition: all 0.5s ease-in-out; /* Smooth animation */
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0); /* Reset to original position */
 }

@@ -113,9 +113,7 @@
   border-radius: 8px; /* Rounded corners for image */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adds a shadow to the image */
 }
-
-/* Task managment app */
-
+/* Task management app */
 .Taskmng {
   display: flex;
   flex-direction: column;
@@ -124,15 +122,66 @@
   width: 400px;
   margin: 10px;
   padding: 1rem;
-  border: 2px solid rgb(52, 235, 235); /* Border color for InternX card */
+  border: 2px solid rgb(52, 235, 235); /* Border color for the card */
   background-color: #100f0f;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  transition: transform 0.2s, border-color 0.2s;
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s; /* Smooth transition for hover effects */
 }
 
 .Taskmng:hover {
-  
+  animation: preBounce 0.6s ease-out; /* Combines pre-animation with bounce */
   box-shadow: 0px 6px 10px rgba(52, 235, 235, 0.6); /* Highlighted shadow */
-  border-color: aliceblue; /* Changes border color on hover */ /* Changes border color on hover */
+  border-color: aliceblue; /* Changes border color on hover */
 }
+
+/* Pre-animation combined with bounce */
+@keyframes preBounce {
+  0% {
+    transform: scale(1); /* Initial state */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Initial shadow */
+  }
+  25% {
+    transform: scale(1.05) rotate(2deg); /* Slight enlargement and rotation */
+    box-shadow: 0px 6px 12px rgba(52, 235, 235, 0.4); /* Shadow expands */
+  }
+  50% {
+    transform: scale(0.98) rotate(-2deg); /* Slight shrink and opposite rotation */
+  }
+  75% {
+    transform: scale(1.03) translateY(-5px); /* Upward motion before bounce */
+  }
+  100% {
+    transform: translateY(0); /* Ends with the bounce effect */
+  }
+}
+
+
+/* Task management app */
+.InternX {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 610px;
+  width: 400px;
+  margin: 10px;
+  padding: 1rem;
+  border: 2px solid rgb(52, 235, 235); /* Border color for the card */
+  background-color: #100f0f;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s; /* Smooth transition for hover effects */
+  animation: slideIn 0.6s ease-out; 
+}
+
+.InternX:hover {
+  animation: preBounce 0.6s ease-out; /* Combines pre-animation with bounce */
+  box-shadow: 0px 6px 10px rgba(52, 235, 235, 0.6); /* Highlighted shadow */
+  border-color: aliceblue; /* Changes border color on hover */
+}
+
+
+
+
+
+

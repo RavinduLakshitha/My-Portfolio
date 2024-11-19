@@ -125,7 +125,7 @@
   height: 100vh;
   z-index: -1; /* Keep behind main content */
   overflow: hidden;
-  background-color:black;
+  background-color: black;
 }
 
 .wrapper span {
@@ -209,7 +209,7 @@
   left: 45%;
   width: 3px;
   height: 3px;
-  animation-delay:2s;
+  animation-delay: 2s;
 }
 .wrapper span:nth-child(13) {
   left: 75%;
@@ -233,4 +233,105 @@
   }
 }
 
-  
+@keyframes containerAnimation {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.container {
+  animation: containerAnimation 0.5s ease-out;
+}
+@keyframes boxAnimation {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.box {
+  animation: boxAnimation 1s ease-out forwards;
+}
+@keyframes profileAnimation {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.hirebtn {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hirebtn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+@keyframes wrapperAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.wrapper {
+  animation: wrapperAnimation 1s ease-in;
+}
+
+.wrapper span {
+  animation: floatUp 5s linear infinite, wrapperAnimation 1s ease-in;
+}
+@keyframes roleAnimation {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.role {
+  animation: roleAnimation 1s ease-out forwards;
+}
+@keyframes contentFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.content {
+  animation: slideUp 1.5s ease-out forwards;
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
