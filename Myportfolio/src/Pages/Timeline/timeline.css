@@ -4,6 +4,9 @@
   justify-content: center;
   align-items: flex-start;
   gap: 20px;
+  border: 1px solid;
+  border-color: rgb(52, 235, 235, 0.8);
+  padding: 30px;
 }
 
 .timeline {
