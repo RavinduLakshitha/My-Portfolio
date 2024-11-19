@@ -6,17 +6,20 @@ import Portfolio from "./Pages/Home/portfolio";
 import Project from "./Pages/Projects/projects";
 import TechStack from "./Pages/TechStack/techstack";
 import Timeline from "./Pages/Timeline/timeline";
+import Layout from "./Component/Layout/layout";
 
 function App() {
   return (
-    <div>
-      <NavbarCom />
-      <Portfolio />
-      <Project />
-      <TechStack />
-      <Timeline />
-      <Contactme />
-    </div>
+    <Layout>
+      <div>
+        <NavbarCom />
+        <Portfolio />
+        <Project />
+        <TechStack />
+        <Timeline />
+        <Contactme />
+      </div>
+    </Layout>
   );
 }
 
