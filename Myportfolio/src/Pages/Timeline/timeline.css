@@ -7,6 +7,7 @@
   border: 1px solid;
   border-color: rgb(52, 235, 235, 0.8);
   padding: 30px;
+  border-radius: 10px;
 }
 
 .timeline {
