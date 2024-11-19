@@ -12,10 +12,14 @@ import Php from "../../Images/PHP.png";
 import Laravel from "../../Images/Larvel.png";
 import Mysql from "../../Images/mysql.png";
 import LHAS from "../../Images/Lecture.png";
+// import CV from "../CV/CV";
+import Layout from "../../Component/Layout/layout";
+
 
 const Project = () => {
   return (
     <>
+    <Layout>
       <div id="projects" className="topic">
         <h1>My Projects</h1>
         <div className="card">
@@ -94,6 +98,7 @@ const Project = () => {
           </div>
         </div>
       </div>
+      </Layout>
     </>
   );
 };
