@@ -4,8 +4,8 @@
   justify-content: center;
   align-items: flex-start;
   gap: 20px;
-  /* border: none; */
 }
+
 .timeline {
   color: aliceblue;
   font-size: 60px; /* Responsive font size */
@@ -14,37 +14,50 @@
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   margin-top: 20px;
   padding-top: 100px;
-  /* padding-bottom: 20px; */
+  animation: fadeIn 1s ease-in-out; /* Entrance animation */
 }
+
 .flexbox02 {
   width: 5px;
   height: 800px;
   flex-direction: column;
   background-color: rgb(52, 235, 235);
+  animation: growHeight 1.5s ease-in-out; /* Vertical growth animation */
 }
+
 .photo {
   width: 100px;
   height: 100px;
   border-radius: 50%;
+  animation: zoomIn 0.8s ease-out; /* Zoom-in entrance animation */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions for hover effects */
 }
+
+.photo:hover {
+  transform: scale(1.1); /* Enlarges on hover */
+  box-shadow: 0px 6px 15px rgba(52, 235, 235, 0.6); /* Highlighted shadow */
+}
+
 .flexbox01 {
   text-align: justify;
   width: auto;
   height: auto;
+  animation: slideIn 1s ease-out; /* Slide-in animation for text */
 }
 
 .flexbox01 h1 {
   font-size: 15px;
 }
+
 .flexbox01 h2 {
   font-size: 20px;
   color: rgb(52, 235, 235);
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
 .flexbox01 h3 {
   font-size: 14px;
-  /* color: rgb(52, 235, 235); */
 }
 
 .Secondry {
@@ -62,12 +75,45 @@
 
 .flexbox01 .Secondry:nth-child(3) .photo {
   background-color: #e1effb; /* Replace with your desired color */
-  border-radius: 50%; /* Optional rounded corners */
+  border-radius: 50%;
 }
 
-.photo:hover {
-  /* background-color: rgb(35, 200, 200); */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  transform: scale(1.05);
-  box-shadow: 0px 6px 10px rgba(249, 250, 250, 0.6);
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Fully transparent at start */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8); /* Smaller size */
+    opacity: 0; /* Invisible at start */
+  }
+  100% {
+    transform: scale(1); /* Original size */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-20px); /* Starts slightly offscreen */
+    opacity: 0; /* Fully transparent */
+  }
+  100% {
+    transform: translateX(0); /* Moves to final position */
+    opacity: 1; /* Fully visible */
+  }
+}
+
+@keyframes growHeight {
+  0% {
+    height: 0px; /* Starts with no height */
+  }
+  100% {
+    height: 800px; /* Full height */
+  }
 }
