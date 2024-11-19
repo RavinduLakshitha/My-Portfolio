@@ -12,6 +12,7 @@
   border-color: rgb(52, 235, 235, 0.8);
   margin-top: 70px;
   height: auto;
+  flex-direction: row;
 }
 
 .box {
@@ -311,7 +312,7 @@
 }
 
 .role {
-  animation: roleAnimation 1s ease-out forwards;
+  animation: roleAnimation 1s ease-out;
 }
 @keyframes contentFadeIn {
   0% {
@@ -323,7 +324,7 @@
 }
 
 .content {
-  animation: slideUp 1.5s ease-out forwards;
+  animation: slideUp 1.5s ease-out;
 }
 @keyframes slideUp {
   0% {
@@ -334,4 +335,154 @@
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+@media (max-width: 1200px) {
+  /* Large screens (Desktops) */
+  .container {
+    flex-direction: column;
+    margin-top: 40px;
+    align-items: center;
+    text-align: justify; /* Justify the text inside the container */
+    padding: 10px;
+    margin-left: 10px;
+  }
+
+  .box {
+    flex: 1;
+    margin-right: 10px;
+    flex-direction: row;
+    width: 100%;
+    text-align: justify; /* Ensure text in the box is justified */
+  }
+
+  .flexbox1 {
+    width: 100%;
+    padding-left: 0;
+    text-align: justify; /* Justify text in flexbox1 */
+  }
+
+  .flexbox2 {
+    width: 50%;
+    padding-left: 0;
+    text-align: justify; /* Justify text in flexbox2 */
+  }
+  .hirebtn {
+    width: 30%;
+    font-size: 14px;
+    padding: 10px 20px;
+    display: flex; /* Ensure flex properties are applied */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    margin: 0 auto;
+    margin-top: 20px; /* Center the button within its container */
+}
+}
+
+
+@media (max-width: 992px) {
+  /* Medium screens (Tablets) */
+  .container {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .flexbox1,
+  .flexbox2 {
+    width: 100%;
+    padding-left: 0;
+  }
+  .profile {
+    font-size: 36px;
+    text-align: left;
+    margin-top: -10px;
+  }
+  .content {
+    font-size: 18px;
+  }
+  .hirebtn {
+    width: 30%;
+    font-size: 12px;
+    padding: 10px 20px;
+    display: flex; /* Ensure flex properties are applied */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    margin: 0 auto;
+    margin-top: 20px; /* Center the button within its container */
+}
+}
+
+@media (max-width: 768px) {
+  /* Small screens (Tablets) */
+  .container {
+    flex-direction: column;
+  }
+  .box {
+    margin-bottom: 20px;
+  }
+  .profile {
+    font-size: 30px;
+    text-align: left;
+    margin-top: -10px;
+  }
+  .role {
+    font-size: 24px;
+  }
+  .content {
+    font-size: 16px;
+  }
+  .hirebtn {
+    width: 30%;
+    font-size: 10px;
+    padding: 10px 20px;
+    display: flex; /* Ensure flex properties are applied */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    margin: 0 auto;
+    margin-top: 20px; /* Center the button within its container */
+}
+  .flexbox1,
+  .flexbox2 {
+    width: 100%; /* Take full width in smaller screens */
+    padding-left: 0; /* Reset padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small screens (Mobile) */
+  .container {
+    /* flex-direction: column; */
+    margin-top: 40px;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .box {
+    flex: 1;
+    margin-right: 10px;
+    flex-direction: row;
+    width: 100%;
+  }
+  .profile {
+    font-size: 24px;
+    padding-top: 10px;
+    margin-top: -10px;
+    text-align: left;
+  }
+  .role {
+    font-size: 20px;
+  }
+  .content {
+    font-size: 14px;
+    padding-right: 10px;
+  }
+  .hirebtn {
+    width: 30%;
+    font-size: 8px;
+    padding: 10px 20px;
+    display: flex; /* Ensure flex properties are applied */
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+    margin: 0 auto;
+    margin-top: 20px; /* Center the button within its container */
+}
 }
