@@ -24,7 +24,7 @@ const Project = () => {
         <h1>My Projects</h1>
         <div className="card">
           <div className="InternX">
-            <img className="Images" src={InternxHero} alt="internx Hero" />
+            <img className="Images1" src={InternxHero} alt="internx Hero" />
             <h5 className="card-title">InternX</h5>
             <p className="card-text">
               InternX is a MERN stack web application designed to connect Sri
