@@ -92,17 +92,17 @@
 .Technologies img {
   width: 35px;
   height: 35px;
-  transition: transform 0.2s;/* Smooth transition on hover */
-  border: 2px solid rgb(52, 235, 235); 
+  transition: transform 0.2s; /* Smooth transition on hover */
+  border: 2px solid rgb(52, 235, 235);
   border-radius: 8px;
   padding: 3px;
-  background-color: #1c1c1c; 
+  background-color: #1c1c1c;
 }
 
 .Technologies img:hover {
   /* transform: scale(1.02); */
-  box-shadow: 0px 6px 10px rgba(52, 235, 235, 0.6); 
-  border-color: aliceblue; 
+  box-shadow: 0px 6px 10px rgba(52, 235, 235, 0.6);
+  border-color: aliceblue;
 }
 
 /* Image Styling */
@@ -113,7 +113,7 @@
   border-radius: 8px; /* Rounded corners for image */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adds a shadow to the image */
 }
-.Images1{
+.Images1 {
   height: 250px;
   padding: 10px;
   width: 480px;
@@ -164,7 +164,6 @@
   }
 }
 
-
 /* Task management app */
 .InternX {
   display: flex;
@@ -179,7 +178,7 @@
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
   transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s; /* Smooth transition for hover effects */
-  animation: slideIn 0.6s ease-out; 
+  animation: slideIn 0.6s ease-out;
 }
 
 .InternX:hover {
@@ -188,13 +187,17 @@
   border-color: aliceblue; /* Changes border color on hover */
 }
 
-
 @media (max-width: 480px) {
-  .InternX, .Taskmng {
+  .InternX,
+  .Taskmng {
     width: 100%; /* Full width for smaller screens */
     height: auto; /* Adjust height automatically */
     padding: 1rem;
   }
+  .topic {
+    font-size: 30px;
+  }
+
 
   .card {
     flex-direction: column; /* Stack cards vertically */
@@ -216,26 +219,31 @@
     height: auto; /* Maintain aspect ratio */
   }
 
-  .Technologies{
+  .Technologies {
     width: fit-content;
   }
   .Technologies img {
     width: 25px;
     height: 25px;
-    transition: transform 0.2s;/* Smooth transition on hover */
-    border: 2px solid rgb(52, 235, 235); 
+    transition: transform 0.2s; /* Smooth transition on hover */
+    border: 2px solid rgb(52, 235, 235);
     border-radius: 8px;
     padding: 3px;
-    background-color: #1c1c1c; 
+    background-color: #1c1c1c;
   }
 }
 
 /* For screens up to 768px (tablets) */
 @media (max-width: 768px) {
-  .InternX, .Taskmng {
+  .InternX,
+  .Taskmng {
     width: 100%; /* Wider cards on tablets */
     padding: 1rem;
   }
+  .topic {
+    font-size: 40px;
+  }
+
 
   .card {
     flex-direction: column; /* Stack cards vertically */
@@ -255,9 +263,13 @@
 
 /* For screens up to 992px (medium desktops or smaller laptops) */
 @media (max-width: 992px) {
-  .InternX, .Taskmng {
+  .InternX,
+  .Taskmng {
     width: 100%; /* Slightly smaller cards for medium screens */
     padding: 1.5rem;
+  }
+  .topic {
+    font-size: 45px;
   }
 
   .card {
@@ -277,9 +289,13 @@
 
 /* For screens up to 1200px (large desktops) */
 @media (max-width: 1200px) {
-  .InternX, .Taskmng {
+  .InternX,
+  .Taskmng {
     width: 100%; /* Larger cards */
     padding: 2rem;
+  }
+  .topic {
+    font-size: 50px;
   }
 
   .card {
@@ -300,10 +316,5 @@
   .Images1 {
     width: 100%;
     height: 250px;
+  }
 }
-}
-
-
-
-
-

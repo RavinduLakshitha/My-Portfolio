@@ -359,7 +359,8 @@
   .flexbox1 {
     width: 100%;
     padding-left: 0;
-    text-align: justify; /* Justify text in flexbox1 */
+    text-align: justify;
+    margin-top: -15px; /* Justify text in flexbox1 */
   }
 
   .flexbox2 {
@@ -376,6 +377,11 @@
     align-items: center; /* Center the content vertically */
     margin: 0 auto;
     margin-top: 20px; /* Center the button within its container */
+}
+.profile{
+  font-size: 42px;
+  padding-top: -10px;
+  /* padding-top: -10px; */
 }
 }
 
@@ -408,6 +414,9 @@
     align-items: center; /* Center the content vertically */
     margin: 0 auto;
     margin-top: 20px; /* Center the button within its container */
+}
+.profile{
+  font-size: 40px;
 }
 }
 
@@ -444,6 +453,9 @@
   .flexbox2 {
     width: 100%; /* Take full width in smaller screens */
     padding-left: 0; /* Reset padding for smaller screens */
+  }
+  .profile{
+    font-size: 38px;
   }
 }
 
@@ -484,5 +496,8 @@
     align-items: center; /* Center the content vertically */
     margin: 0 auto;
     margin-top: 20px; /* Center the button within its container */
+}
+.profile{
+  font-size: 35px;
 }
 }

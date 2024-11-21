@@ -213,3 +213,106 @@
   opacity: 1;
   transform: translateY(0); /* Reset to original position */
 }
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    gap: 15px; /* Adjust gap for smaller screens */
+  }
+
+  .flexbox001,
+  .flexbox002 {
+    width: 80%; /* Reduce width to fit smaller screens */
+  }
+
+  .flexbox002 h4 {
+    font-size: 18px; /* Adjust font size for readability */
+  }
+
+  .subbtn {
+    margin-left: 0; /* Center the button */
+  }
+
+  .inbox {
+    width: 80%; /* Adjust input box width */
+  }
+}
+
+@media (max-width: 992px) {
+  .contact {
+    font-size: 50px; /* Reduce font size */
+  }
+
+  .flexbox002 {
+    font-size: 40px; /* Adjust content font size */
+  }
+
+  .flexbox002 h4 {
+    font-size: 16px;
+  }
+
+  .inbox {
+    font-size: 14px; /* Adjust text size */
+  }
+
+  .subbtn {
+    padding: 6px 12px; /* Adjust button padding */
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact {
+    font-size: 40px;
+  }
+
+  .flexbox001,
+  .flexbox002 {
+    width: 100%; /* Use full width */
+    text-align: center; /* Center-align text */
+  }
+
+  .flexbox002 h4 {
+    font-size: 14px;
+  }
+
+  .inbox {
+    width: 100%;
+  }
+
+  .subbtn {
+    padding: 4px 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    font-size: 30px; /* Further reduce title font size */
+    padding-top: 50px; /* Adjust padding */
+  }
+
+  .flexbox001,
+  .flexbox002 {
+    font-size: 16px; /* Reduce text size */
+  }
+
+  .flexbox002 h4 {
+    font-size: 12px;
+  }
+
+  .subbtn {
+    font-size: 12px; /* Reduce button font size */
+    padding: 3px 8px;
+  }
+
+  .inbox {
+    font-size: 12px; /* Smaller input text */
+  }
+
+  .container {
+    gap: 10px; /* Reduce spacing */
+  }
+}

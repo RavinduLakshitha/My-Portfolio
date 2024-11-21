@@ -22,7 +22,7 @@ const TechStack = () => {
   return (
     <>
       <div id="tech-stack" className="tech">
-        <h1>My Tech Stack</h1>
+        My Tech Stack
         <div className="languages">
           <div className="tech-item">
             <img src={Html} alt="HTML" />
