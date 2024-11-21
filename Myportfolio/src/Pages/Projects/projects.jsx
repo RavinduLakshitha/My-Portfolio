@@ -21,7 +21,7 @@ const Project = () => {
     <>
     <Layout>
       <div id="projects" className="topic">
-        <h1>My Projects</h1>
+        My Projects
         <div className="card">
           <div className="InternX">
             <img className="Images1" src={InternxHero} alt="internx Hero" />
