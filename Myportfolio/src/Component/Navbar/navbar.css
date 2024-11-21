@@ -1,4 +1,4 @@
-/* Navbar Container */
+
 .navbar-container {
   display: flex;
   justify-content: space-between;
@@ -16,7 +16,6 @@
   /* background-color: black; Navbar background */
 }
 
-/* Brand Name */
 .ravindu {
   color: rgb(52, 235, 235);
   font-size: 30px;
@@ -24,7 +23,6 @@
   font-weight: bold;
 }
 
-/* Menu Items */
 .other {
   list-style: none;
   display: flex;
@@ -45,7 +43,7 @@
   color: #ddd;
 }
 
-/* Menu Icon */
+
 .menu-icon {
   display: none;
   font-size: 25px;
