@@ -1,95 +1,253 @@
 /* Title Styling */
 .tech {
-    color: aliceblue;
-    font-size: 60px; /* Responsive font size */
-    font-weight: bold;
-    text-align: center;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    margin-top: 20px;
-    padding-top: 50px;
+  color: aliceblue;
+  font-size: 60px; /* Responsive font size */
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  padding-top: 50px;
 }
 
 /* Tech Stack Container */
 .languages {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
-    padding-top: 50px;
-    animation: fadeIn 1s ease-in-out; /* Entrance animation for the container */
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+  padding-top: 50px;
+  animation: fadeIn 1s ease-in-out; /* Entrance animation for the container */
 }
 
 /* Individual Tech Item */
 .tech-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 1px solid rgb(52, 235, 235);
-    border-radius: 8px;
-    padding: 10px;
-    background-color: #1b1b1b;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
-    width: 80px; /* Consistent width for uniform appearance */
-    animation: slideIn 0.6s ease-out; /* Slide-in animation for individual items */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(52, 235, 235);
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #1b1b1b;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
+  width: 80px; /* Consistent width for uniform appearance */
+  animation: slideIn 0.6s ease-out; /* Slide-in animation for individual items */
 }
 
 /* Hover Effect for Tech Items */
 .tech-item:hover {
-    animation: pulse 0.4s ease-in-out; /* Adds a pulsing effect on hover */
-    transform: scale(1.1); /* Enlarges slightly more on hover */
-    box-shadow: 0px 6px 10px rgba(52, 235, 235, 0.6); /* Highlighted shadow */
-    border-color: aliceblue; /* Changes border color on hover */
+  animation: pulse 0.4s ease-in-out; /* Adds a pulsing effect on hover */
+  transform: scale(1.1); /* Enlarges slightly more on hover */
+  box-shadow: 0px 6px 10px rgba(52, 235, 235, 0.6); /* Highlighted shadow */
+  border-color: aliceblue; /* Changes border color on hover */
 }
 
 /* Icon Styling */
 .tech-item img {
-    width: 60px; 
-    height: 45px;
-    margin-bottom: 5px; /* Space between icon and label */
+  width: 60px;
+  height: 45px;
+  margin-bottom: 5px; /* Space between icon and label */
 }
 
 /* Text Label Styling */
 .tech-item p {
-    margin-top: 5px;
-    font-size: 14px;
-    color: rgb(52, 235, 235); 
-    text-align: center;
-    font-weight: 500; /* Slightly bolder text for readability */
+  margin-top: 5px;
+  font-size: 14px;
+  color: rgb(52, 235, 235);
+  text-align: center;
+  font-weight: 500; /* Slightly bolder text for readability */
 }
 
 /* Keyframes for Hover Pulse Effect */
 @keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1); /* Grows slightly */
-    }
-    100% {
-        transform: scale(1); /* Returns to original size */
-    }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* Grows slightly */
+  }
+  100% {
+    transform: scale(1); /* Returns to original size */
+  }
 }
 
 /* Keyframes for Slide-in Animation */
 @keyframes slideIn {
-    0% {
-        transform: translateY(20px); /* Starts slightly below the final position */
-        opacity: 0; /* Fully transparent at start */
-    }
-    100% {
-        transform: translateY(0); /* Moves to final position */
-        opacity: 1; /* Fully visible */
-    }
+  0% {
+    transform: translateY(20px); /* Starts slightly below the final position */
+    opacity: 0; /* Fully transparent at start */
+  }
+  100% {
+    transform: translateY(0); /* Moves to final position */
+    opacity: 1; /* Fully visible */
+  }
 }
 
 /* Keyframes for Fade-in Animation (Container) */
 @keyframes fadeIn {
-    0% {
-        opacity: 0; /* Fully transparent */
-    }
-    100% {
-        opacity: 1; /* Fully visible */
-    }
+  0% {
+    opacity: 0; /* Fully transparent */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+  }
+}
+/* Responsive Design */
+
+/* Large Screens (1200px and up) */
+@media (max-width: 1200px) {
+  .tech {
+    font-size: 50px; /* Slightly smaller title font size */
+    padding-top: 40px;
+  }
+  .tech-item {
+    width: 70px; /* Smaller tech item size */
+  }
+  /* .tech-item img {
+    width: 50px;
+    height: 40px; /* Reduced icon size */
+  /* } */ 
+  .tech-item p {
+    font-size: 13px; /* Adjusted text size */
+  }
+ 
+}
+
+/* Medium Screens (992px and up) */
+@media (max-width: 992px) {
+  .tech {
+    font-size: 45px;
+  }
+  .languages {
+    gap: 15px; /* Reduce gap between items */
+  }
+  .tech-item {
+    width: 60px;
+    padding: 8px;
+  }
+  /* .tech-item img {
+    width: 45px;
+    height: 35px;
+  } */
+  .tech-item p {
+    font-size: 12px;
+  }
+  .tech-stack {
+    font-size: 40px; /* Smallest font size */
+    padding-top: 60px;
+  }
+}
+
+/* Tablets (768px and up) */
+@media (max-width: 768px) {
+  .tech {
+    font-size: 40px;
+    padding-top: 30px;
+  }
+  .languages {
+    gap: 10px;
+  }
+  .tech-item {
+    width: 55px;
+  }
+  /* .tech-item img {
+    width: 40px;
+    height: 30px;
+  } */
+  .tech-item p {
+    font-size: 11px;
+  }
+  .tech-stack {
+    font-size: 30px; /* Smallest font size */
+    padding-top: 50px;
+  }
+}
+
+/* Small Screens (480px and up) */
+@media (max-width: 480px) {
+  .tech {
+    font-size: 35px;
+    padding-top: 20px;
+  }
+  .languages {
+    gap: 8px;
+    padding-top: 30px;
+  }
+  .tech-item {
+    width: 50px;
+    padding: 5px;
+  }
+  .tech-item p {
+    font-size: 10px;
+  }
+  .tech-stack {
+    font-size: 25px; /* Smallest font size */
+    padding-top: 40px;
+  }
+}
+
+/* Extra Small Screens (Below 480px) */
+@media (max-width: 360px) {
+  .tech {
+    font-size: 30px;
+    padding-top: 15px;
+  }
+  .languages {
+    gap: 5px;
+  }
+  .tech-item {
+    width: 45px;
+  }
+  .tech-stack {
+    font-size: 25px; /* Smallest font size */
+    padding-top: 40px;
+  }
+  .tech-item p {
+    font-size: 9px;
+  }
+}
+
+/* Icon Styling for Tech Items */
+.tech-item img {
+  width: 60px; /* Default size for large screens */
+  height: 45px; /* Maintain aspect ratio */
+  margin-bottom: 5px; /* Space between icon and label */
+  object-fit: contain; /* Ensures images fit within the dimensions */
+}
+
+/* Responsive Sizes */
+@media (max-width: 1200px) {
+  .tech-item img {
+    width: 50px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 992px) {
+  .tech-item img {
+    width: 45px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-item img {
+    width: 40px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tech-item img {
+    width: 35px;
+    height: 25px;
+  }
+}
+
+@media (max-width: 360px) {
+  .tech-item img {
+    width: 30px;
+    height: 20px;
+  }
 }
