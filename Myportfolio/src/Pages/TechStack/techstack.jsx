@@ -3,7 +3,7 @@ import Html from "../../Images/html.png";
 import Css from "../../Images/css.png";
 import Js from "../../Images/js.png";
 import C from "../../Images/c.png";
-import Java from "../../Images/java.png";
+import Java from "../../Images/Java.png";
 import Python from "../../Images/python.png";
 import node from "../../Images/node.png";
 import php from "../../Images/PHP.png";
