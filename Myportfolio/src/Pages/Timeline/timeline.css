@@ -1,3 +1,15 @@
+/* General Styles */
+.timeline {
+  color: aliceblue;
+  font-size: 60px;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  padding-top: 100px;
+  animation: fadeIn 1s ease-in-out;
+}
+
 .container_T {
   display: flex;
   flex-direction: row;
@@ -10,43 +22,19 @@
   border-radius: 10px;
 }
 
-.timeline {
-  color: aliceblue;
-  font-size: 60px; /* Responsive font size */
-  font-weight: bold;
-  text-align: center;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  margin-top: 20px;
-  padding-top: 100px;
-  animation: fadeIn 1s ease-in-out; /* Entrance animation */
-}
-
 .flexbox02 {
   width: 5px;
   height: 800px;
   flex-direction: column;
   background-color: rgb(52, 235, 235);
-  animation: growHeight 1.5s ease-in-out; /* Vertical growth animation */
-}
-
-.photo {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  animation: zoomIn 0.8s ease-out; /* Zoom-in entrance animation */
-  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions for hover effects */
-}
-
-.photo:hover {
-  transform: scale(1.1); /* Enlarges on hover */
-  box-shadow: 0px 6px 15px rgba(52, 235, 235, 0.6); /* Highlighted shadow */
+  animation: growHeight 1.5s ease-in-out;
 }
 
 .flexbox01 {
   text-align: justify;
   width: auto;
   height: auto;
-  animation: slideIn 1s ease-out; /* Slide-in animation for text */
+  animation: slideIn 1s ease-out;
 }
 
 .flexbox01 h1 {
@@ -72,82 +60,70 @@
   padding-top: 20px;
 }
 
-.Secondry .photo {
+/* Scroll Animation */
+.photo {
   width: 100px;
   height: 100px;
-}
-.higher .photo {
-  width: 100px;
-  height: 100px;
-}
-
-.flexbox01 .Secondry:nth-child(3) .photo {
-  background-color: #e1effb; /* Replace with your desired color */
   border-radius: 50%;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(30px); /* Initially translated down */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
+.photo.scroll-visible {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Move to the original position */
+}
+
+/* Keyframes for animations */
 @keyframes fadeIn {
   0% {
-    opacity: 0; /* Fully transparent at start */
+    opacity: 0;
   }
   100% {
-    opacity: 1; /* Fully visible */
-  }
-}
-
-@keyframes zoomIn {
-  0% {
-    transform: scale(0.8); /* Smaller size */
-    opacity: 0; /* Invisible at start */
-  }
-  100% {
-    transform: scale(1); /* Original size */
-    opacity: 1; /* Fully visible */
+    opacity: 1;
   }
 }
 
 @keyframes slideIn {
   0% {
-    transform: translateX(-20px); /* Starts slightly offscreen */
-    opacity: 0; /* Fully transparent */
+    transform: translateX(-20px);
+    opacity: 0;
   }
   100% {
-    transform: translateX(0); /* Moves to final position */
-    opacity: 1; /* Fully visible */
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
 @keyframes growHeight {
   0% {
-    height: 0px; /* Starts with no height */
+    height: 0;
   }
   100% {
-    height: 800px; /* Full height */
+    height: 800px;
   }
 }
+
 /* Responsive Design */
 @media (max-width: 1200px) {
   .container_T {
-    /* flex-direction: column; Stack items vertically */
     align-items: center;
     padding: 20px;
     gap: 15px;
-    border: 1px solid;
-    border-color: rgb(52, 235, 235, 0.8);
-    border-radius: 10px;
   }
 
   .timeline {
-    font-size: 50px; /* Adjust font size */
+    font-size: 50px;
     padding-top: 80px;
   }
 
   .flexbox02 {
-    height: 600px; /* Adjust timeline height */
+    height: 600px;
   }
 
   .flexbox01 h2 {
-    font-size: 18px; /* Slightly reduce font size */
+    font-size: 18px;
   }
 
   .flexbox01 h1,
@@ -163,23 +139,20 @@
 
 @media (max-width: 992px) {
   .container_T {
-    gap: 10px; /* Reduce gap */
+    gap: 10px;
     padding: 15px;
-    border: 1px solid;
-    border-color: rgb(52, 235, 235, 0.8);
-    border-radius: 10px;
   }
 
   .timeline {
-    font-size: 45px; /* Further reduce font size */
+    font-size: 45px;
   }
 
   .flexbox02 {
-    height: 600px; /* Adjust height */
+    height: 600px;
   }
 
   .flexbox01 h2 {
-    font-size: 16px; /* Reduce font size */
+    font-size: 16px;
   }
 
   .flexbox01 h1,
@@ -195,20 +168,17 @@
 
 @media (max-width: 768px) {
   .container_T {
-    border: none; /* Remove border for smaller screens */
+    border: none;
     padding: 10px;
-    border: 1px solid;
-    border-color: rgb(52, 235, 235, 0.8);
-    border-radius: 10px;
   }
 
   .timeline {
-    font-size: 40px; /* Reduce font size */
+    font-size: 40px;
     padding-top: 60px;
   }
 
   .flexbox02 {
-    height: 600px; /* Shorter timeline */
+    height: 600px;
   }
 
   .flexbox01 h2 {
@@ -224,29 +194,25 @@
 @media (max-width: 480px) {
   .container_T {
     padding: 5px;
-    gap: 5px; 
-    border: 1px solid;
-    border-color: rgb(52, 235, 235, 0.8);
-    border-radius: 10px;/* Minimal spacing for small devices */
+    gap: 5px;
   }
 
   .timeline {
-    font-size: 35px; /* Smallest font size */
+    font-size: 35px;
     padding-top: 40px;
   }
 
   .flexbox02 {
-    height: 600px; /* Smallest height */
+    height: 600px;
   }
 
   .flexbox01 h2 {
     font-size: 12px;
-    padding: 5px 0;
   }
 
   .flexbox01 h1,
   .flexbox01 h3 {
-    font-size: 8px; /* Minimal text size */
+    font-size: 8px;
   }
 
   .photo {
@@ -254,5 +220,3 @@
     height: 50px;
   }
 }
-
-
