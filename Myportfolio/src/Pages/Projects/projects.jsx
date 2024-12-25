@@ -1,5 +1,5 @@
+import { useEffect, useRef } from "react";
 import "./projects.css";
-// import ravinduimg from "../../Images/ravinduimg.png";
 import InternxHero from "../../Images/InternXHero.png";
 import React from "../../Images/react.png";
 import Mongo from "../../Images/mongo.png";
@@ -12,17 +12,56 @@ import Php from "../../Images/PHP.png";
 import Laravel from "../../Images/Larvel.png";
 import Mysql from "../../Images/mysql.png";
 import LHAS from "../../Images/Lecture.png";
-// import CV from "../CV/CV";
 import Layout from "../../Component/Layout/layout";
 
 const Project = () => {
+  // Create reference for the cards
+  const projectRef = useRef([]);
+
+  // Add the observer to animate all the cards on scroll
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        // Loop through each entry (card)
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate-section");
+          } else {
+            entry.target.classList.remove("animate-section");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    // Observe each card element
+    projectRef.current.forEach((el) => {
+      if (el) {
+        observer.observe(el);
+      }
+    });
+
+    // Cleanup observer when component unmounts
+    return () => {
+      projectRef.current.forEach((el) => {
+        if (el) {
+          observer.unobserve(el);
+        }
+      });
+    };
+  }, []);
+
   return (
     <>
       <Layout>
         <div id="projects" className="topic">
           My Projects
           <div className="card">
-            <div className="InternX">
+            {/* InternX Project */}
+            <div
+              className="InternX"
+              ref={(el) => (projectRef.current[0] = el)}
+            >
               <img className="Images1" src={InternxHero} alt="internx Hero" />
               <h5 className="card-title">InternX</h5>
               <p className="card-text">
@@ -43,8 +82,11 @@ const Project = () => {
               </div>
             </div>
 
-            {/* Task Managment App */}
-            <div className="InternX">
+            {/* Task Management App */}
+            <div
+              className="InternX"
+              ref={(el) => (projectRef.current[1] = el)}
+            >
               <img
                 className="Images"
                 src={Tskmngmt}
@@ -70,7 +112,10 @@ const Project = () => {
             </div>
 
             {/* Lecture Hall Allocation System */}
-            <div className="InternX">
+            <div
+              className="InternX"
+              ref={(el) => (projectRef.current[2] = el)}
+            >
               <img
                 className="Images"
                 src={LHAS}

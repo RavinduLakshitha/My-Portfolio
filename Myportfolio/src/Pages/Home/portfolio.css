@@ -254,7 +254,7 @@
 }
 
 .box {
-  animation: boxAnimation 1s ease-out forwards;
+  animation: boxAnimation 1s ease-out ;
 }
 @keyframes profileAnimation {
   0% {
@@ -507,15 +507,15 @@
 }
 
 .animate-container {
-  animation: containerAnimation 0.5s ease-out forwards;
+  animation: containerAnimation 0.5s ease-out ;
 }
 
 .animate-flexbox1 {
-  animation: boxAnimation 1s ease-out forwards;
+  animation: boxAnimation 1s ease-out;
 }
 
 .animate-flexbox2 {
-  animation: boxAnimation 1s ease-out forwards;
+  animation: boxAnimation 1s ease-out ;
 }
 
 @keyframes containerAnimation {
@@ -569,7 +569,7 @@
 }
 
 .role.animate-role {
-  animation: roleFadeIn 1s ease-out forwards;
+  animation: roleFadeIn 1s ease-out;
 }
 
 /* Hire button animation */
@@ -580,7 +580,7 @@
 }
 
 .hirebtn.animate-hirebtn {
-  animation: hirebtnFadeIn 1s ease-out forwards;
+  animation: hirebtnFadeIn 1s ease-out;
 }
 
 .hirebtn:hover {
