@@ -251,3 +251,14 @@
     height: 20px;
   }
 }
+
+.tech-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.tech-item.visible {
+  opacity: 2;
+  transform: translateY(0);
+}
