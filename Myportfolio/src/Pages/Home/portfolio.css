@@ -48,10 +48,10 @@
   color: transparent;
   background-size: 200% 100%; /* Expands the gradient horizontally */
   background-position: 100% 0; /* Start gradient from the far right */
-  animation: animate 4s linear infinite;
+  animation: scroll 4s linear infinite;
 }
 
-@keyframes animate {
+@keyframes scroll {
   0% {
     background-position: 100% 0;
   }
