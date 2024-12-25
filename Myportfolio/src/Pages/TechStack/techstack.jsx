@@ -50,6 +50,7 @@ const TechStack = () => {
       });
     };
   }, []);
+  
   return (
     <div id="tech-stack" className="tech">
     My Tech Stack
