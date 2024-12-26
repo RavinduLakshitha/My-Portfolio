@@ -108,7 +108,7 @@ const Portfolio = () => {
                 Hire Me
               </button>
               <button className="hirebtn">
-                <a href="/CV.pdf" download="CV">
+                <a href="/Cv.pdf" download="CV">
                   Download CV
                 </a>
               </button>
