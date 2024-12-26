@@ -203,7 +203,7 @@
   .card {
     flex-direction: column; /* Stack cards vertically */
     gap: 10px; /* Reduce gap between cards */
-    padding: 20px;
+    padding: 10px;
     width: 100%;
   }
 
@@ -249,7 +249,7 @@
   .card {
     flex-direction: column; /* Stack cards vertically */
     gap: 15px;
-    padding: 30px;
+    padding: 10px;
     height: 800px;
   }
 
@@ -276,7 +276,7 @@
   .card {
     flex-direction: column; /* Cards side by side */
     gap: 20px;
-    padding: 40px;
+    padding: 10px;
   }
 
   .card-title {
@@ -302,7 +302,7 @@
   .card {
     flex-direction: column; /* Cards side by side */
     gap: 20px;
-    padding: 50px;
+    padding: 10px;
     height: auto;
   }
 

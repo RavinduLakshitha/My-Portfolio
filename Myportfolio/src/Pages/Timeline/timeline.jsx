@@ -45,7 +45,7 @@ const Timeline = () => {
 
   return (
     <div className="timeline" id="timeline">
-      <h1>Time Line</h1>
+      <h1>Timeline</h1>
       <div className="container_T">
         <div className="flexbox02"></div>
         <div className="flexbox01">
