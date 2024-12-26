@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import "./portfolio.css";
 import ravinduimg from "../../Images/ravinduimg.png";
 import { FaHireAHelper } from "react-icons/fa";
+import CV from "../../Images/CV.pdf"; // Ensure correct import path for CV
 
 const Portfolio = () => {
   const portfolioRef = useRef(null);
@@ -15,30 +16,26 @@ const Portfolio = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          // Add animation classes when the portfolio section is in view
           portfolioRef.current.classList.add("animate-portfolio");
           containerRef.current.classList.add("animate-container");
           flexbox1Ref.current.classList.add("animate-flexbox1");
           flexbox2Ref.current.classList.add("animate-flexbox2");
         } else {
-          // Remove animation classes when the portfolio section is out of view
           portfolioRef.current.classList.remove("animate-portfolio");
           containerRef.current.classList.remove("animate-container");
           flexbox1Ref.current.classList.remove("animate-flexbox1");
           flexbox2Ref.current.classList.remove("animate-flexbox2");
         }
       },
-      { threshold: 0.2 } // Trigger animation when 20% of the section is visible
+      { threshold: 0.2 }
     );
 
     const element = portfolioRef.current;
     if (element) observer.observe(element);
 
-    // Store the refs in variables to avoid issues with cleanup
     const roleElement = roleRef.current;
     const hirebtnElement = hirebtnRef.current;
 
-    // Observer for "role" and "hirebtn" elements
     const roleObserver = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -65,7 +62,6 @@ const Portfolio = () => {
     if (hirebtnElement) hirebtnObserver.observe(hirebtnElement);
 
     return () => {
-      // Cleanup observers
       if (roleElement) roleObserver.unobserve(roleElement);
       if (hirebtnElement) hirebtnObserver.unobserve(hirebtnElement);
       if (element) observer.unobserve(element);
@@ -79,11 +75,12 @@ const Portfolio = () => {
   return (
     <>
       <div className="wrapper">
-        <span></span>
-        {/* Other wrapper spans */}
+        <span className="span-deco"></span>
+        <span className="span-deco"></span>
+        {/* Add more spans for decoration if needed */}
       </div>
       <div id="portfolio" className="portfolio" ref={portfolioRef}>
-        <h1>about</h1>
+        <h1>About</h1>
         <div className="container" ref={containerRef}>
           <div className="flexbox1" ref={flexbox1Ref}>
             <div className="myp">
@@ -102,14 +99,24 @@ const Portfolio = () => {
                 so feel free to reach out!
               </p>
             </div>
-            <button className="hirebtn" ref={hirebtnRef} onClick={scrollToContact}>
-              <FaHireAHelper size={25} />
-              Hire Me
-            </button>
+            <div className="buttons">
+              <button
+                className="hirebtn"
+                ref={hirebtnRef}
+                onClick={scrollToContact}
+              >
+                <FaHireAHelper size={25} />
+                Hire Me
+              </button>
+              <button className="hirebtn">
+                <a href={CV} download="Ravindu_Lakshitha_CV">
+                  Download CV
+                </a>
+              </button>
+            </div>
           </div>
-
           <div className="flexbox2" ref={flexbox2Ref}>
-            <img src={ravinduimg} alt="Ravindu img" />
+            <img src={ravinduimg} alt="Ravindu Lakshitha" />
           </div>
         </div>
       </div>
