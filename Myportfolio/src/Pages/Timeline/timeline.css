@@ -8,6 +8,7 @@
   margin-top: 20px;
   padding-top: 100px;
   animation: fadeIn 1s ease-in-out;
+  margin-bottom: 40px;
 }
 
 .container_T {
@@ -39,6 +40,7 @@
 
 .flexbox01 h1 {
   font-size: 15px;
+  margin-bottom: 10px;
 }
 
 .flexbox01 h2 {
@@ -65,14 +67,13 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  opacity: 0; /* Initially hidden */
-  transform: translateY(30px); /* Initially translated down */
+  opacity: 0; /* Initially hidden */ /* Initially translated down */
   transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .photo.scroll-visible {
   opacity: 1; /* Fade in */
-  transform: translateY(0); /* Move to the original position */
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 /* Keyframes for animations */
@@ -111,6 +112,8 @@
     align-items: center;
     padding: 20px;
     gap: 15px;
+    border: 1px solid;
+    border-color: rgb(52, 235, 235, 0.8);
   }
 
   .timeline {
@@ -141,6 +144,8 @@
   .container_T {
     gap: 10px;
     padding: 15px;
+    border: 1px solid;
+    border-color: rgb(52, 235, 235, 0.8);
   }
 
   .timeline {
@@ -170,6 +175,8 @@
   .container_T {
     border: none;
     padding: 10px;
+    border: 1px solid;
+    border-color: rgb(52, 235, 235, 0.8);
   }
 
   .timeline {
@@ -195,6 +202,8 @@
   .container_T {
     padding: 5px;
     gap: 5px;
+    border: 1px solid;
+    border-color: rgb(52, 235, 235, 0.8);
   }
 
   .timeline {

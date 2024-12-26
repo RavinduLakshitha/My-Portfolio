@@ -316,3 +316,27 @@
     gap: 10px; /* Reduce spacing */
   }
 }
+
+.contact {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.contact.animate {
+  opacity: 1;
+}
+
+.container {
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.flexbox002, .flexbox001 {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.contact.animate .flexbox002,
+.contact.animate .flexbox001 {
+  opacity: 1;
+}

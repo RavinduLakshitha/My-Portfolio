@@ -135,7 +135,7 @@
   background-color: #100f0f;
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s; /* Smooth transition for hover effects */
+  transition: border-color 0.2s, box-shadow 0.2s; /* Smooth transition for hover effects */
 }
 
 .Taskmng:hover {
@@ -179,7 +179,7 @@
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
   transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s; /* Smooth transition for hover effects */
-  animation: slideIn 0.6s ease-out;
+  /* animation: slideIn 0.6s ease-out; */
 }
 
 .InternX:hover {
@@ -320,38 +320,27 @@
   }
 }
 
-/* Define the scroll animation for the card */
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-    transform: none;
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+*/
 
 .animate-card {
   animation: fadeInUp 0.6s ease-out;
-  transform: none;
+  /* transform: none; */
 }
 
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(50px);
-    transform: none;
+    transition: opacity 0.8s ease;
+    /* transform: none; */
   }
   100% {
     opacity: 1;
-    transform: translateY(0);
+    transition: opacity 0.8s ease;
   }
 }
 
 /* You can use this animation on the ref-based elements as well */
 .InternX.animate-section {
   animation: fadeInUp 1.2s ease-in-out;
-  transform: none;
+  /* transform: none; */
 }
