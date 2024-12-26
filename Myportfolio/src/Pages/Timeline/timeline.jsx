@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import "./Timeline.css";
+import "./timeline.css";
 import Susl from "../../Images/susl.png";
 import scc from "../../Images/SCC.png";
 import smv from "../../Images/SMV.png";
