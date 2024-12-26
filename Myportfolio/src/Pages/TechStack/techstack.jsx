@@ -1,3 +1,5 @@
+import { useRef, useEffect, handleScroll } from "react";
+
 import "./techstack.css";
 import Html from "../../Images/html.png";
 import Css from "../../Images/css.png";
@@ -19,86 +21,52 @@ import Git from "../../Images/git.png";
 import Ghub from "../../Images/github.png";
 
 const TechStack = () => {
+  const techItemsRef = useRef([]);
+
+  useEffect(() => {
+    const currentRefs = techItemsRef.current; // Copy ref values to a local variable
+    currentRefs.forEach((item) => {
+      if (item) {
+        const handleScroll = () => {
+          const rect = item.getBoundingClientRect();
+          if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+            item.classList.add("visible"); // Add class for animation
+          } else {
+            item.classList.remove("visible");
+          }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        handleScroll(); // Call initially to set the state
+      }
+    });
+
+    // Cleanup function
+    return () => {
+      currentRefs.forEach((item) => {
+        if (item) {
+          window.removeEventListener("scroll", handleScroll);
+        }
+      });
+    };
+  }, []);
+  
   return (
-    <>
-      <div id="tech-stack" className="tech">
-        My Tech Stack
-        <div className="languages">
-          <div className="tech-item">
-            <img src={Html} alt="HTML" />
-            <p>HTML</p>
-          </div>
-          <div className="tech-item">
-            <img src={Css} alt="CSS" />
-            <p>CSS</p>
-          </div>
-          <div className="tech-item">
-            <img src={Js} alt="Js" />
-            <p>JavaScript</p>
-          </div>
-          <div className="tech-item">
-            <img src={C} alt="c" />
-            <p>C</p>
-          </div>
-          <div className="tech-item">
-            <img src={Java} alt="Java" />
-            <p>Java</p>
-          </div>
-          <div className="tech-item">
-            <img src={Python} alt="python" />
-            <p>Python</p>
-          </div>
-          <div className="tech-item">
-            <img src={node} alt="js" />
-            <p>NodeJS</p>
-          </div>
-          <div className="tech-item">
-            <img src={php} alt="php" />
-            <p>PHP</p>
-          </div>
-          <div className="tech-item">
-            <img src={larvel} alt="lrvl" />
-            <p>Laravel</p>
-          </div>
-          <div className="tech-item">
-            <img src={react} alt="react" />
-            <p>React</p>
-          </div>
-          <div className="tech-item">
-            <img src={Tail} alt="tail" />
-            <p>Tailwind</p>
-          </div>
-          <div className="tech-item">
-            <img src={boot} alt="boot" />
-            <p>Bootstrap</p>
-          </div>
-          <div className="tech-item">
-            <img src={MUI} alt="mui" />
-            <p>MUI</p>
-          </div>
-          <div className="tech-item">
-            <img src={Mong} alt="mongo" />
-            <p>MongoDB</p>
-          </div>
-          <div className="tech-item">
-            <img src={Mys} alt="mys" />
-            <p>My SQL</p>
-          </div>
-          <div className="tech-item">
-            <img src={Fire} alt="firebase" />
-            <p>Firebase</p>
-          </div>
-          <div className="tech-item">
-            <img src={Git} alt="git" />
-            <p>Git</p>
-          </div>
-          <div className="tech-item">
-            <img src={Ghub} alt="github" />
-            <p>GitHub</p>
-          </div>
+    <div id="tech-stack" className="tech">
+    My Tech Stack
+    <div className="languages">
+      {[Html, Css, Js, C, Java, Python, node, php, larvel, react, Tail, boot, MUI, Mong, Mys, Fire, Git, Ghub].map((img, index) => (
+        <div
+          key={index}
+          className="tech-item"
+          ref={(el) => (techItemsRef.current[index] = el)}
+        >
+          <img src={img} alt={`Tech ${index}`} />
+          <p>{img.split("/").pop().split(".")[0]}</p>
         </div>
-      </div>
-    </>
+      ))}
+    </div>
+  </div>
   );
 };
 

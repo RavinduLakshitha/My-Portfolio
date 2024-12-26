@@ -48,10 +48,10 @@
   color: transparent;
   background-size: 200% 100%; /* Expands the gradient horizontally */
   background-position: 100% 0; /* Start gradient from the far right */
-  animation: animate 4s linear infinite;
+  animation: scroll 4s linear infinite;
 }
 
-@keyframes animate {
+@keyframes scroll {
   0% {
     background-position: 100% 0;
   }
@@ -89,7 +89,7 @@
   background-color: rgb(52, 235, 235, 0.8); /* Vibrant background color */
   color: black; /* White text for contrast */
   padding: 12px 24px; /* Add padding for a nicer size */
-  font-size: 18px; /* Increase font size for readability */
+  font-size: 14px; /* Increase font size for readability */
   font-weight: bold; /* Bold text */
   cursor: pointer; /* Change cursor to pointer on hover */
   transition: all 0.3s ease; /* Smooth transitions for effects */
@@ -248,15 +248,9 @@
 .container {
   animation: containerAnimation 0.5s ease-out;
 }
+
 @keyframes boxAnimation {
-  0% {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  
 }
 
 .box {
@@ -378,11 +372,49 @@
     margin: 0 auto;
     margin-top: 20px; /* Center the button within its container */
 }
+.downbtn{
+  width: 30%;
+  font-size: 14px;
+  padding: 10px 20px;
+  display: flex; /* Ensure flex properties are applied */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  margin: 0 auto;
+  margin-top: 20px; /* Center the button within its container */
+}
+
+  .profile {
+    font-size: 40px;
+    padding-top: 10px;
+    margin-top: -10px;
+    text-align: left;
+  }
+  .role {
+    font-size: 28px;
+  }
+  .content {
+    font-size: 18px;
+    padding-right: 10px;
+  }
+  .profile{
+    font-size: 42px;
+    padding-top: -10px;
+    /* padding-top: -10px; */
+  }
+}
+
 .profile{
   font-size: 42px;
   padding-top: -10px;
   /* padding-top: -10px; */
 }
+
+.buttons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
 }
 
 
@@ -424,8 +456,11 @@
   /* Small screens (Tablets) */
   .container {
     flex-direction: column;
+    padding: 10px;
+    align-items: center;
   }
   .box {
+    width: 100%;
     margin-bottom: 20px;
   }
   .profile {
@@ -438,6 +473,7 @@
   }
   .content {
     font-size: 16px;
+    padding: 20px;
   }
   .hirebtn {
     width: 30%;
@@ -501,3 +537,66 @@
   font-size: 35px;
 }
 }
+
+/* Add animations for elements triggered by scroll */
+.animate-portfolio {
+  opacity: 1;
+  transition: opacity 1s ease-in;
+}
+
+.animate-container {
+  animation: containerAnimation 0.5s ease-out ;
+}
+
+.animate-flexbox1 {
+  animation: boxAnimation 1s ease-out ;
+}
+
+.animate-flexbox2 {
+  animation: boxAnimation 1s ease-out ;
+}
+
+@keyframes containerAnimation {
+  0% {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes boxAnimation {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes roleFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hirebtnFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
