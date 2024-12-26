@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react";
 import "./portfolio.css";
 import ravinduimg from "../../Images/ravinduimg.png";
 import { FaHireAHelper } from "react-icons/fa";
+import CV from "../../Images/Cv.pdf";
 
 const Portfolio = () => {
   const portfolioRef = useRef(null);
@@ -108,7 +109,7 @@ const Portfolio = () => {
                 Hire Me
               </button>
               <button className="hirebtn">
-                <a href="/Cv.pdf" download="CV">
+                <a href= {CV }download="CV">
                   Download CV
                 </a>
               </button>
