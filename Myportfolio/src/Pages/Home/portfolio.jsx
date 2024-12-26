@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import "./portfolio.css";
 import ravinduimg from "../../Images/ravinduimg.png";
 import { FaHireAHelper } from "react-icons/fa";
-import CV from "../../Images/Cv.pdf"; // Ensure correct import path for CV
+// import CV from "../../Images/Cv.pdf"; // Ensure correct import path for CV
 
 const Portfolio = () => {
   const portfolioRef = useRef(null);
@@ -109,7 +109,7 @@ const Portfolio = () => {
                 Hire Me
               </button>
               <button className="hirebtn">
-                <a href={CV} download="Ravindu_Lakshitha_CV">
+                <a href="/CV.pdf" download="Ravindu_Lakshitha_CV">
                   Download CV
                 </a>
               </button>
