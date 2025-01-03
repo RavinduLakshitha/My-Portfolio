@@ -7,6 +7,7 @@ import Project from "./Pages/Projects/projects";
 import TechStack from "./Pages/TechStack/techstack";
 import Timeline from "./Pages/Timeline/timeline";
 import Layout from "./Component/Layout/layout";
+import Footer from "./Component/Footer/footer";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <TechStack />
         <Timeline />
         <Contactme />
+        <Footer />
       </div>
     </Layout>
   );
